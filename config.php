@@ -11,8 +11,8 @@
     define('HOST','localhost');
     define('USER','root');
     define('PASSWORD','');
-    define('DATABASE','myfilmes');
-    define('BASE','http://localhost/Projects/myFilmes/');
+    define('DATABASE','database');
+    define('BASE','http://localhost/');
     define('BASE_UPLOADS', __DIR__.'/uploads/');
     define('BASE_IMAGES_MOVIES','https://image.tmdb.org/t/p/w500');
 
