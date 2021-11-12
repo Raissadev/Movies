@@ -6,7 +6,7 @@
     class moviesModel{
 
         private $headers = [
-            'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlNTY3NzgzNDY1ODYyYmRlODIxYTI1Yzk5NzNmNDM3ZSIsInN1YiI6IjYxOGJjMjk2YTMxM2I4MDA2MjRlZGUxOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Ku5fujdGLbRS3kjWVP4DJ0Gx1GJJRj3xFEoQx36DkF0',
+            'Authorization: Bearer **************',
             'Content-Type: application/json;charset=utf-8'
         ];
         private $key;
