@@ -1,6 +1,6 @@
 # Movies
 <h3>Sobre o Projeto</h3>
-<p>Sistema de filmes, com front-end UX/UI, usando o cURL para request da API do themoviedb.</p>
+<p>Sistema de filmes, com front-end UX/UI, usando o cURL para request da API.</p>
 
 <ul>
   <li>Lenguages:</li>
