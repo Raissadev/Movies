@@ -15,7 +15,7 @@
         private $account;
 
         public function __construct(){
-            $this->key = 'e567783465862bde821a25c9973f437e';
+            $this->key = 'SUA API KEY';
             $this->url = 'https://api.themoviedb.org/3';
             $this->account = $_SESSION['id'];
         }
