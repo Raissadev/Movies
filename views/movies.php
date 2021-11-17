@@ -28,7 +28,7 @@
                 @$response = $api->getMovieFilter($_GET['infos']);
                 foreach($response->results as $key => $value){
                     if(isset($_POST['addWitchList'])){
-                        \models\usersModel::witchList($_SESSION['id'],  $_POST['movie_id'], $_POST['name'], $_POST['image']);
+                        \controllers\usersController::witchList($_SESSION['id'],  $_POST['movie_id'], $_POST['name'], $_POST['image']);
                     }
             ?>
                 <li class="positionRelative">

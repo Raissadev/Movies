@@ -4,7 +4,7 @@
             <ul class="listMovies itemsFlex flexWrap">
             <?php
                 if(isset($_GET['delete'])){
-                    \models\usersModel::deleteWitchList($_GET['id']);
+                    \controllers\usersController::deleteWitchList($_GET['id']);
                     echo "<script> alert('Item deletado com sucesso!'); </script>";
                 }
                 $getWitchList = \models\usersModel::getWitchList();

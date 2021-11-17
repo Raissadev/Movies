@@ -4,7 +4,7 @@
     $id_movie = $_GET['url'];
     $response = $api->getMovie($id_movie);
     if(isset($_POST['addWitchList'])){
-        \models\usersModel::witchList($_SESSION['id'],  $_POST['movie_id'], $_POST['name'], $_POST['image']);
+        \controllers\usersController::witchList($_SESSION['id'],  $_POST['movie_id'], $_POST['name'], $_POST['image']);
     }
 ?>
 

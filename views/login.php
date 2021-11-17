@@ -2,7 +2,7 @@
     \controllers\accessController::controlAccess();
 
     if(isset($_POST['login'])){
-        \models\accessModel::signIn($_POST['name'],$_POST['password']);
+        \controllers\accessController::signIn($_POST['name'],$_POST['password']);
     }
 ?>
 

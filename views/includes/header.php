@@ -13,7 +13,7 @@
 </head>
 <body>
 <?php  
-    \models\usersModel::logout(); 
+    \controllers\usersController::logout(); 
     if($slug !== 'login' && $slug !== 'register'){
 ?>
 <aside class="aside displayInlineFlexColumn hideDeviceSmall">

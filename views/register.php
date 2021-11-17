@@ -2,7 +2,7 @@
     \controllers\accessController::controlAccess();
 
     if(isset($_POST['register'])){
-        \models\accessModel::signUp($_POST['name'], $_POST['email'], $_POST['password'], $_FILES['image']);
+        \controllers\accessController::signUp($_POST['name'], $_POST['email'], $_POST['password'], $_FILES['image']);
     }
 ?>
 

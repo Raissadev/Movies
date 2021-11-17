@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['update'])){
-        \models\usersModel::updateUser($_POST['name'], $_POST['email'], $_POST['password'], $_FILES['image']);
+        \controllers\usersController::updateUser($_POST['name'], $_POST['email'], $_POST['password'], $_FILES['image']);
     }
 ?>
 <section class="containerUser w100 h100 itemsFlex alignCenter justCenter">
