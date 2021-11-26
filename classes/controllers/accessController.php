@@ -35,7 +35,7 @@
                     $_SESSION['name'] = $name;
                     $_SESSION['email'] = $email;
                     $_SESSION['password'] = $password;
-                    $_SESSION['image'] = $image;
+                    $_SESSION['image'] = $image['name'];
                     $_SESSION['type'] = 'user';
                     header('Location: '.BASE.'');
                     die();
