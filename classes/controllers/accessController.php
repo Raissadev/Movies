@@ -8,7 +8,6 @@
             if(isset($_SESSION['login'])){
                 if($_GET['url'] === 'login' || $_GET['url'] === 'register'){
                     header('Location: '.BASE.'');
-                    die();
                 }
             }
         }
@@ -17,7 +16,6 @@
             if($_SESSION['type'] === 'user'){
                 if($_GET['url'] === 'send-mail'){
                     header('Location: '.BASE.'');
-                    die();
                 }
             }
         }
@@ -31,14 +29,8 @@
                 $register->execute(array($name,$email,$password,$image['name'],'user'));
                 move_uploaded_file($image['tmp_name'], BASE_UPLOADS.$image['name']);
                 if($register->rowCount() == 1){
-                    $_SESSION['login'] = true;
-                    $_SESSION['name'] = $name;
-                    $_SESSION['email'] = $email;
-                    $_SESSION['password'] = $password;
-                    $_SESSION['image'] = $image['name'];
-                    $_SESSION['type'] = 'user';
+                    self::signIn($name, $password);
                     header('Location: '.BASE.'');
-                    die();
                 }else{
                     echo "<script> alert('Erro ao registrar'); </script>";
                 }
@@ -67,7 +59,6 @@
                     setcookie('password', $password, time()+(60*60*7), '/');
                 }
                 header('Location: '.BASE.'');
-                die();
             }else{
                 echo "<script> alert('Dados inválidos!'); </script>";
                 return;
