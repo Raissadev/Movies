@@ -25,7 +25,7 @@
             $idUser = $_SESSION['id'];
             $type = $_SESSION['type'];
             $update = \MySql::connect()->prepare("UPDATE `users` SET name = ? , email = ? , 
-            password = ? , image = ? ,  type = ? WHERE id = $idUser ");
+            password = ? , image = ? ,  type = ? WHERE id = '$idUser'");
             $update->execute(array($name, $email, $password, $image['name'], $type));
             move_uploaded_file($image['tmp_name'], BASE_UPLOADS.$image['name']);
             if($update->rowCount() == 1){
@@ -45,7 +45,7 @@
         }
 
         public static function deleteWitchList($movie){
-            $deleteWitchList = \MySql::connect()->prepare("DELETE FROM `wishlist` WHERE movie_id = $movie");
+            $deleteWitchList = \MySql::connect()->prepare("DELETE FROM `wishlist` WHERE movie_id = '$movie'");
             $deleteWitchList->execute();
             return $deleteWitchList;
         }
